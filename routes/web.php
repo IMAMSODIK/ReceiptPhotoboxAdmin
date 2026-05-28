@@ -14,6 +14,9 @@ Route::get('/', function () {
     }
 });
 
+Route::get('/auth/google', [AuthController::class, 'redirect']);
+Route::get('/auth/google/callback', [AuthController::class, 'callback']);
+
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index']);
 

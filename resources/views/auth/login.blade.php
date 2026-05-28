@@ -45,11 +45,11 @@
                     platform.</p>
             </div>
 
-            <button id="googleCorporateBtn" class="google-btn">
+            <a id="googleCorporateBtn" class="google-btn" href="/auth/google">
                 <i class="fab fa-google"></i>
                 <span>Lanjutkan dengan Google</span>
                 <i class="fas fa-arrow-right" style="font-size: 0.85rem; opacity: 0.7;"></i>
-            </button>
+            </a>
 
             <div class="divider">
                 <span>Akses terenkripsi</span>
