@@ -45,7 +45,7 @@
                     aria-expanded="false">
 
                     <img class="avatar-img avatar-sm"
-                        src="{{ Auth::user()->avatar ?? asset('dashboard_assets/images/avatar/avatar.jpg') }}"
+                        src="{{ Auth::user()->foto ?? asset('dashboard_assets/images/avatar/avatar.jpg') }}"
                         alt="{{ Auth::user()->name }}">
 
                     <span class="profile-name d-none d-sm-inline">

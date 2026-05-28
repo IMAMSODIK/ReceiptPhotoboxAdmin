@@ -2,7 +2,7 @@
     window.adminHMDUser = {
         name: @json(Auth::user()->name),
         workspace: "Nun Snap Tenant",
-        avatar: @json(Auth::user()->avatar ?? asset('dashboard_assets/images/avatar/avatar.jpg'))
+        avatar: @json(Auth::user()->foto ?? asset('dashboard_assets/images/avatar/avatar.jpg'))
     };
 </script>
 

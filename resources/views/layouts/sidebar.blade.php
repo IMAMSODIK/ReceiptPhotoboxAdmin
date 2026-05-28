@@ -62,7 +62,7 @@
 
     <div class="sidebar-user">
         <img class="avatar-img avatar-md sidebar-user-avatar"
-            src="{{ Auth::user()->avatar ?? asset('dashboard_assets/images/avatar/avatar.jpg') }}" alt="{{ Auth::user()->name }}">
+            src="{{ Auth::user()->foto ?? asset('dashboard_assets/images/avatar/avatar.jpg') }}" alt="{{ Auth::user()->name }}">
         <strong>{{ Auth::user()->name }}</strong>
         <small>Active Workspace</small>
     </div>
