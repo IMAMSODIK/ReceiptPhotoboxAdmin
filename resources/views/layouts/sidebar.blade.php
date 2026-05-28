@@ -3,7 +3,6 @@
         <a class="brand-mark" href="index.html" aria-label="adminHMD dashboard">
             <span class="brand-icon">
                 <img src="{{asset('dashboard_assets/images/brand/logo/logo.png')}}" alt="" width="100%">
-                <i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>
             </span>
             <span class="brand-copy">
                 <span class="brand-title">{{env("APP_NAME")}}</span>
