@@ -1,9 +1,12 @@
 <aside class="admin-sidebar" id="adminSidebar" aria-label="Main navigation">
     <div class="sidebar-header">
         <a class="brand-mark" href="index.html" aria-label="adminHMD dashboard">
-            <span class="brand-icon"><i class="bi bi-grid-1x2-fill" aria-hidden="true"></i></span>
+            <span class="brand-icon">
+                <img src="{{asset('dashboard_assets/images/brand/logo/logo.png')}}" alt="" srcset="">
+                <i class="bi bi-grid-1x2-fill" aria-hidden="true"></i>
+            </span>
             <span class="brand-copy">
-                <span class="brand-title">Noon Snap</span>
+                <span class="brand-title">{{env("APP_NAME")}}</span>
                 <span class="brand-subtitle">#snap_partner</span>
             </span>
         </a>
