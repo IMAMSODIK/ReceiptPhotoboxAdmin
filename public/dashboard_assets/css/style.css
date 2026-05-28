@@ -95,8 +95,11 @@ a {
   width: 42px;
   height: 42px;
   border-radius: 8px;
-  background: linear-gradient(135deg, #2563eb, #0f766e);
   color: #ffffff;
+}
+
+.brand-icon img{
+  border-radius: 20px;
 }
 
 .brand-copy,
