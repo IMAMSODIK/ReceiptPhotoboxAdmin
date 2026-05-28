@@ -1,6 +1,7 @@
 "use strict";
 
 (function () {
+  
   var sidebarStorageKey = "adminHMD.sidebarMini";
   var themeStorageKey = "adminHMD.colorTheme";
   var desktopMedia = "(min-width: 992px)";
