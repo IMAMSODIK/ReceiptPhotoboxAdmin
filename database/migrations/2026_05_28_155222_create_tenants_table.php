@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('subdomain');
             $table->string('logo')->nullable();
             $table->string('phone')->nullable();
-            $table->string('phone')->nullable();
             $table->string('client_key')->nullable();
             $table->string('server_key')->nullable();
             $table->string('callback')->nullable();
