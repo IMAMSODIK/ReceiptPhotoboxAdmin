@@ -10,29 +10,50 @@ use Laravel\Socialite\Socialite;
 
 class AuthController extends Controller
 {
-    public function redirect()
+    public function redirectGoogle()
     {
-        return Socialite::driver('google')->redirect();
+        try {
+
+            return Socialite::driver('google')->redirect();
+        } catch (\Exception $e) {
+
+            return redirect('/login')->with('error', 'Gagal menghubungkan ke Google');
+        }
     }
 
-    public function callback()
+    public function handleGoogleCallback()
     {
-        $googleUser = Socialite::driver('google')->user();
+        try {
 
-        $user = User::updateOrCreate(
-            [
-                'email' => $googleUser->getEmail(),
-            ],
-            [
-                'name' => $googleUser->getName(),
-                'google_id' => $googleUser->getId(),
-                'avatar' => $googleUser->getAvatar(),
-            ]
-        );
+            $googleUser = Socialite::driver('google')->user();
 
-        Auth::login($user);
+            $user = User::where('email', $googleUser->email)->first();
 
-        return redirect('/dashboard');
+            if (!$user) {
+
+                $user = User::create([
+                    'name' => $googleUser->name,
+                    'email' => $googleUser->email,
+                    'google_id' => $googleUser->id,
+                    'foto' => $googleUser->avatar,
+                    'role' => 'tenant',
+                    'status' => 1,
+                    'password' => bcrypt(rand(100000, 999999))
+                ]);
+            } else {
+                $user->update([
+                    'google_id' => $googleUser->id,
+                    'foto' => $googleUser->avatar
+                ]);
+            }
+
+            Auth::login($user);
+
+            return redirect('/dashboard');
+        } catch (\Exception $e) {
+
+            return redirect('/login')->with('error', 'Login Google gagal');
+        }
     }
 
     public function login()
