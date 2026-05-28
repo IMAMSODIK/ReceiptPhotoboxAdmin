@@ -1,6 +1,6 @@
 <aside class="admin-sidebar" id="adminSidebar" aria-label="Main navigation">
     <div class="sidebar-header">
-        <a class="brand-mark" href="index.html" aria-label="adminHMD dashboard">
+        <a class="brand-mark" href="/dashboard" aria-label="dashboard">
             <span class="brand-icon">
                 <img src="{{asset('dashboard_assets/images/brand/logo/logo.png')}}" alt="" width="100%">
             </span>
@@ -12,7 +12,7 @@
     </div>
 
     <nav class="sidebar-nav">
-        <a class="nav-link active" href="index.html" aria-current="page">
+        <a class="nav-link active" href="/dashboard" aria-current="page">
             <span class="nav-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
             <span class="nav-text">Dashboard</span>
         </a>
