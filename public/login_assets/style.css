@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Plus Jakarta Sans', sans-serif;
+    background: #F0F4F8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+/* Container utama dua kolom */
+.corporate-container {
+    max-width: 1280px;
+    width: 100%;
+    background: #FFFFFF;
+    border-radius: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+/* Sisi Kiri - Gambar Portrait & Overlay Korporat */
+.hero-section {
+    flex: 1.2;
+    background: linear-gradient(135deg, #0A2647 0%, #1B3A5C 100%);
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.88;
+    transition: transform 0.4s ease;
+}
+
+.hero-section:hover .hero-image {
+    transform: scale(1.02);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 38, 71, 0.75) 0%, rgba(27, 58, 92, 0.65) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem;
+    color: white;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.hero-content .company-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.2rem;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.3px;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    max-width: 90%;
+}
+
+.hero-content p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    max-width: 85%;
+}
+
+/* Sisi Kanan - Form Login Google */
+.login-section {
+    flex: 1;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.5rem 2.8rem;
+}
+
+.login-header {
+    margin-bottom: 2rem;
+}
+
+.login-header .logo-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.8rem;
+}
+
+.logo-icon i {
+    font-size: 2rem;
+    color: #1E3A8A;
+    background: #EFF6FF;
+    padding: 0.6rem;
+    border-radius: 1rem;
+}
+
+.logo-icon span {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #0F172A;
+    letter-spacing: -0.3px;
+}
+
+.login-header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.5rem;
+}
+
+.login-header .greeting {
+    color: #475569;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Keamanan & benefit card */
+.security-note {
+    background: #F8FAFE;
+    border-radius: 1.2rem;
+    padding: 1rem 1.2rem;
+    margin: 1.5rem 0 1.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border: 1px solid #E9EEF3;
+}
+
+.security-note i {
+    font-size: 1.3rem;
+    color: #1E3A8A;
+}
+
+.security-note span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1E293B;
+    line-height: 1.3;
+}
+
+/* Tombol Google premium */
+.google-btn {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    padding: 1rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1E293B;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    margin-bottom: 1.5rem;
+}
+
+.google-btn i {
+    font-size: 1.3rem;
+}
+
+.google-btn:hover {
+    background: #F8FAFE;
+    border-color: #CBD5E1;
+    box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.google-btn:active {
+    transform: translateY(1px);
+}
+
+/* informasi tambahan */
+.info-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #64748B;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.info-links a {
+    color: #3B82F6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.info-links a:hover {
+    color: #1E3A8A;
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #CBD5E1;
+    font-size: 0.7rem;
+    margin: 1.2rem 0 1rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #E9EEF3;
+}
+
+.divider span {
+    margin: 0 0.7rem;
+    font-weight: 500;
+}
+
+.footer-company {
+    font-size: 0.7rem;
+    color: #94A3B8;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Modal simulasi Google Account Picker (Korporat) */
+.google-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.google-modal.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container {
+    background: #FFFFFF;
+    border-radius: 1.8rem;
+    max-width: 400px;
+    width: 90%;
+    padding: 1.6rem;
+    text-align: center;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+    transform: scale(0.96);
+    transition: transform 0.2s;
+}
+
+.google-modal.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-container i {
+    font-size: 3rem;
+    color: #4285F4;
+    background: #F1F5F9;
+    border-radius: 50%;
+    padding: 0.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.modal-container h3 {
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.3rem;
+}
+
+.mock-account {
+    background: #F8FAFE;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: 1px solid #E9EEF3;
+}
+
+.mock-account:hover {
+    background: #EFF6FF;
+}
+
+.mock-avatar {
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(145deg, #1E3A8A, #3B82F6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.mock-details {
+    text-align: left;
+    flex: 1;
+}
+
+.mock-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #0F172A;
+}
+
+.mock-email {
+    font-size: 0.7rem;
+    color: #5B6B8C;
+}
+
+.modal-close {
+    background: #E9EEF3;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    color: #1E293B;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .login-section {
+        padding: 2rem 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 880px) {
+    .corporate-container {
+        flex-direction: column;
+        max-width: 550px;
+    }
+
+    .hero-section {
+        min-height: 280px;
+        flex: auto;
+        width: 100%;
+    }
+
+    .hero-content {
+        padding: 1.8rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+        max-width: 100%;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+    }
+
+    .login-section {
+        padding: 2rem 1.8rem;
+    }
+
+    .login-header h1 {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+
+    .login-section {
+        padding: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .google-btn {
+        padding: 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .security-note span {
+        font-size: 0.75rem;
+    }
+}
+
+/* Toast modern */
+.toast-corporate {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    background: #1E293B;
+    backdrop-filter: blur(12px);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 4000;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    font-family: 'Inter', sans-serif;
+}
+
+.toast-corporate.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
