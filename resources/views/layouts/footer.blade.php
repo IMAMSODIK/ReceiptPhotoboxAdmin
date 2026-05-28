@@ -1,0 +1,5 @@
+<footer class="admin-footer">
+    <div class="container-fluid px-3 px-lg-4">
+        <span>Copyright 2026 {{env("APP_NAME")}}</span>
+    </div>
+</footer>

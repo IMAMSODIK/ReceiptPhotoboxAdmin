@@ -8,8 +8,12 @@ class DashboardController extends Controller
 {
     public function index()
     {
+        $data = [
+            'pageTitle' => "Dashboard"
+        ];
+
         try {
-            return view('dashboard.index');
+            return view('dashboard.index', $data);
         } catch (\Throwable $e) {
             return redirect()->back()->with('error', 'Terjadi kesalahan saat memuat data.');
         }
